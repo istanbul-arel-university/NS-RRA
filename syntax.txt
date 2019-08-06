@@ -1,0 +1,15 @@
+
+
+Syntax Quick Access Links:
+    
+Convert DataFrame to numpy
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html    
+
+Convert numpy to DataFrame
+https://stackoverflow.com/questions/20763012/creating-a-pandas-dataframe-from-a-numpy-array-how-do-i-specify-the-index-colum
+
+numpy reference
+https://scipy-lectures.org/intro/numpy/index.html
+
+pandas reference
+https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html

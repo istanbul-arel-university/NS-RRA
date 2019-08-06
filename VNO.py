@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jul 31 17:08:27 2019
@@ -6,6 +5,9 @@ Created on Wed Jul 31 17:08:27 2019
 @author: mohamedhozayen
 """
 
+#import UE
+import numpy as np
+import pandas as pd
 
 class VNO:
     """
@@ -15,62 +17,49 @@ class VNO:
 
     Attributes
     ----------
-    says_str : str
-        a formatted string to print out what the animal says
-    name : str
-        the name of the animal
-    sound : str
-        the sound that the animal makes
-    num_legs : int
-        the number of legs the animal has (default 4)
+
 
     Methods
     -------
-    says(sound=None)
-        Prints the animals name and what sound it makes
     """
+    
+    userCount = 0
+    pk = 0 #maybe an array or something like that
 
-    says_str = "A {name} says {sound}"
 
-    def __init__(self, name, sound, num_legs=4):
+    def __init__(self):
         """
         Parameters
         ----------
-        name : str
-            The name of the animal
-        sound : str
-            The sound the animal makes
-        num_legs : int, optional
-            The number of legs the animal (default is 4)
+
         """
 
-        self.name = name
-        self.sound = sound
-        self.num_legs = num_legs
 
-    def says(self, sound=None):
-        """Prints what the animals name is and what sound it makes.
+    def makeUser():
+        return
+        
+#    def userCount():
+#        return userCount
+    
+    def preference():
+        return
+        
+    def buildPreferenceProfile(self):
+        """build VNO Preference Profile
 
-        If the argument `sound` isn't passed in, the default Animal
-        sound is used.
 
         Parameters
         ----------
         sound : str, optional
             The sound the animal makes (default is None)
 
-        Raises
+        Return
         ------
-        NotImplementedError
-            If no sound is set for the animal or passed in as a
-            parameter.
+        VNO preference profile
         """
+        return
 
-        if self.sound is None and sound is None:
-            raise NotImplementedError("Silent Animals are not supported!")
 
-        out_sound = self.sound if sound is None else sound
-        print(self.says_str.format(name=self.name, sound=out_sound))
     
     
     
