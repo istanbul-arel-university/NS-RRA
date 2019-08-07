@@ -16,8 +16,9 @@ class VNO:
     """
     
 
-    def __init__(self):
-        pass
+    def __init__(self, num_users):
+        self.num_users = num_users
+        
 
 
     def makeUser():
@@ -29,13 +30,17 @@ class VNO:
     def preference():
         return
         
-    def buildPreferenceProfile(self):
+    def buildUsersPreferenceProfile(self):
         """
         build VNO Preference Profile
         """
         return
 
+def main():
+    print("Hello World!")
 
+if __name__ == "__main__":
+    main()
     
     
     

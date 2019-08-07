@@ -11,6 +11,6 @@ class Channel:
     """
 
     
-    def __init__(self, bandwidth, price):
+    def __init__(self, price, bandwidth=180):
         self.bandwidth = bandwidth
         self.price = price
