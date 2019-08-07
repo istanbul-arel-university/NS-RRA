@@ -13,3 +13,21 @@ https://scipy-lectures.org/intro/numpy/index.html
 
 pandas reference
 https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
+
+install for python3 used by this IDE (spyder3)
+sudo apt-get install python3-numpy
+
+
+anaconda
+Close and open your terminal window for the installation to take effect, 
+or you can enter the command source ~/.bashrc.
+
+To control whether or not each shell session has the base environment activated or not, 
+run conda config --set auto_activate_base False or True. 
+To run conda from anywhere without having the base environment activated by default, 
+use conda config --set auto_activate_base False. This only works if you have run conda init first.
+
+Open a terminal window and type anaconda-navigator
+
+
+

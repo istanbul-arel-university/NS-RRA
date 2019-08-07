@@ -8,31 +8,16 @@ Created on Wed Jul 31 17:08:27 2019
 #import UE
 import numpy as np
 import pandas as pd
+import UE
 
 class VNO:
     """
         A class used to represent an instance for a Virtual Netowrk Operator 
-
-    ...
-
-    Attributes
-    ----------
-
-
-    Methods
-    -------
     """
     
-    userCount = 0
-    pk = 0 #maybe an array or something like that
-
 
     def __init__(self):
-        """
-        Parameters
-        ----------
-
-        """
+        pass
 
 
     def makeUser():
@@ -45,17 +30,8 @@ class VNO:
         return
         
     def buildPreferenceProfile(self):
-        """build VNO Preference Profile
-
-
-        Parameters
-        ----------
-        sound : str, optional
-            The sound the animal makes (default is None)
-
-        Return
-        ------
-        VNO preference profile
+        """
+        build VNO Preference Profile
         """
         return
 
