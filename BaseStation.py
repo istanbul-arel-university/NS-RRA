@@ -4,7 +4,7 @@ Created on Wed Jul 31 17:13:27 2019
 
 @author: mohamedhozayen
 """
-import Channel
+import Channel as ch
 
 class BS:
     """
@@ -17,7 +17,8 @@ class BS:
         self.transmit_power = transmit_power #dBm
         self.loc_x = 0
         self.loc_y = 0
-        self.create_channels()
+        self.channels = self.create_channels()
 
-    def create_channels():
-        channels = [Channel() for i in range(self.num_channels)]
+    def create_channels(self):
+        return [ch.Channel() for i in range(self.num_channels)]
+       
