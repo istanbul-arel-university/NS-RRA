@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Aug 14 17:15:39 2019
- for i in l:
-    print(i.price)
-    
+
+Script - Matching Game Algorithm 
+
 @author: mohamedhozayen
 """
 import InP
