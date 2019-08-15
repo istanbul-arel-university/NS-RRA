@@ -10,26 +10,23 @@ import numpy as np
 import pandas as pd
 import UE
 
-class VNO:
+class VirtualNetworkOperator:
     """
         A class used to represent an instance for a Virtual Netowrk Operator 
     """
     
 
-    def __init__(self, num_users):
+    def __init__(self, id_num, num_users=5):
+        self.id = id_num
         self.num_users = num_users
+        self.users = self.create_users()
         
+    def create_users(self):
+        return [UE.UserEquipment(id_num=i) for i in range(self.num_users)]
 
 
-    def makeUser():
-        return
-        
-#    def userCount():
-#        return userCount
     
-    def preference():
-        return
-        
+
     def buildUsersPreferenceProfile(self):
         """
         build VNO Preference Profile

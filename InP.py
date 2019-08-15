@@ -4,7 +4,7 @@ Created on Wed Jul 31 17:12:22 2019
 
 @author: mohamedhozayen
 """
-import BaseStation
+import BS
 
 class InfrastructureProvider:
     """
@@ -14,10 +14,10 @@ class InfrastructureProvider:
     def __init__(self, num_BS, num_channels):
         self.num_BS = num_BS
         self.num_channels = num_channels
-        self.BS = self.create_BaseStations()
+        self.stn = self.create_BaseStations()
 
     def create_BaseStations(self):
-        return [BaseStation.BS(id_num=i, num_channels=self.num_channels) for i in range(self.num_BS)]
+        return [BS.BaseStation(id_num=i, num_channels=self.num_channels) for i in range(self.num_BS)]
     
     def buildVRPreferenceProfile(self):
         """

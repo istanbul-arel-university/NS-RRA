@@ -7,9 +7,9 @@ Created on Wed Jul 31 17:13:48 2019
 
 from numpy import random
 
-class Channel:
+class VirtualResource:
     """
-        A class used to represent an instance for an OFDMA Channel
+        A class used to represent an instance for an OFDMA Virtual Resource
     """
 
     

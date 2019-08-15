@@ -4,9 +4,9 @@ Created on Wed Jul 31 17:13:27 2019
 
 @author: mohamedhozayen
 """
-import Channel as ch
+import VR as vr
 
-class BS:
+class BaseStation:
     """
         A class used to represent an instance for a Base Station
     """
@@ -17,8 +17,8 @@ class BS:
         self.transmit_power = transmit_power #dBm
         self.loc_x = 0
         self.loc_y = 0
-        self.channels = self.create_channels()
+        self.v_rsc = self.create_channels()
 
     def create_channels(self):
-        return [ch.Channel() for i in range(self.num_channels)]
+        return [vr.VirtualResource() for i in range(self.num_channels)]
        
