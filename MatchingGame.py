@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Aug 14 17:15:39 2019
-
+ for i in l:
+    print(i.price)
+    
 @author: mohamedhozayen
 """
-import BS
+import InP
 
-station = BS(1, 5)
+InP = InP.InfrastructureProvider(num_BS=1, num_channels=5)
