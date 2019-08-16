@@ -33,6 +33,14 @@ class VirtualNetworkOperator:
         """
         return
 
+    def printAbout(self):
+        print
+        print'VNO id: ', self.id
+        for i in self.users:
+            print'User ID: ', i.id
+            print'User minimum data rate: ', i.min_data_rate
+
+
 #def main():
 #    print("Hello World!")
 #
