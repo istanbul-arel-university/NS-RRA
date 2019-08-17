@@ -20,5 +20,6 @@ class BaseStation:
         self.v_rsc = self.create_channels()
 
     def create_channels(self):
-        return [vr.VirtualResource(id_num=i) for i in range(self.num_channels)]
+        power = self.transmit_power/self.num_channels #each channel equal tranmit power
+        return [vr.VirtualResource(id_num=i, transmit_power = power) for i in range(self.num_channels)]
        

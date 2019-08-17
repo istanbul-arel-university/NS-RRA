@@ -39,6 +39,9 @@ class VirtualNetworkOperator:
         for i in self.users:
             print'User ID: ', i.id
             print'User minimum data rate: ', i.min_data_rate
+            print'User Location (x,y): ({},{})'.format(i.loc_x, i.loc_y)
+            print 'User distance to BS', i.distance
+
 
 
 #def main():

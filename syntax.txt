@@ -29,5 +29,9 @@ use conda config --set auto_activate_base False. This only works if you have run
 
 Open a terminal window and type anaconda-navigator
 
-
+(1)  print "First number is {} and second number is {}".format(first, second)
+(1b) print "First number is {first} and number is {second}".format(first=first, second=second) 
+(2) print 'First number is', first, ' second number is', second
+(3) print 'First number %d and second number is %d' % (first, second)
+(4) print 'First number is' + str(first) + 'second number is' + str(second)
 

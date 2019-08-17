@@ -9,6 +9,7 @@ Script - Matching Game Algorithm
 """
 import InP
 import VNO
+import numpy as np
 
 num_vnos = 3
 
@@ -17,3 +18,5 @@ opts = [VNO.VirtualNetworkOperator(id_num=i) for i in range(num_vnos)]
 
 InP.printAbout()
 [opts[i].printAbout() for i in range(len(opts))]
+
+values = np.random.rayleigh()

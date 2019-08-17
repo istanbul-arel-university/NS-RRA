@@ -34,5 +34,6 @@ class InfrastructureProvider:
                 print
                 print'VR id:', j.id
                 print'VR price:', j.price
-                print'VR Bandwidth:', j.bandwidth
+                print'VR bandwidth:', j.bandwidth
+                print 'VR transmit power:', j.transmit_power
             

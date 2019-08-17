@@ -13,9 +13,10 @@ class VirtualResource:
     """
 
     
-    def __init__(self, id_num, price=None, bandwidth=180):
+    def __init__(self, id_num, transmit_power, price=None, bandwidth=180):
         self.id = id_num
         self.bandwidth = bandwidth   
+        self.transmit_power = transmit_power
         if price is None:
             price = random.randint(15, 85)
         self.price = price
