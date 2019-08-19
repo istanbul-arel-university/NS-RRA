@@ -18,5 +18,5 @@ class VirtualResource:
         self.bandwidth = bandwidth   
         self.transmit_power = transmit_power
         if price is None:
-            price = random.randint(15, 85)
+            price = random.uniform(15, 85)
         self.price = price

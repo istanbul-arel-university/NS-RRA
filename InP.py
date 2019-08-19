@@ -33,7 +33,7 @@ class InfrastructureProvider:
             for j in i.v_rsc:
                 print
                 print'VR id:', j.id
-                print'VR price:', j.price
+                print'VR price: {:.2f}'.format(j.price)
                 print'VR bandwidth:', j.bandwidth
                 print 'VR transmit power:', j.transmit_power
             

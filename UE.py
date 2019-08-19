@@ -25,8 +25,8 @@ class UserEquipment:
         self.binary_variable = None
         self.sinr = None
         self.min_data_rate = minimum_data_rate #bps/Hz
-        self.loc_x = random.randint(0, 500)
-        self.loc_y = random.randint(0, 500)
+        self.loc_x = random.uniform(-500, 500)
+        self.loc_y = random.uniform(-500, 500)
         self.distance = math.sqrt((self.loc_x - 0)**2 + (self.loc_y - 0)**2) 
     
     
