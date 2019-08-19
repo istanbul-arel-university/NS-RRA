@@ -9,6 +9,7 @@ Created on Wed Jul 31 17:08:27 2019
 import numpy as np
 import pandas as pd
 import UE
+import InP
 
 class VirtualNetworkOperator:
     """
@@ -27,10 +28,14 @@ class VirtualNetworkOperator:
 
     
 
-    def buildUsersPreferenceProfile(self):
+    def buildUsersPreferenceProfile(self, stations):
         """
         build VNO Preference Profile
         """
+        for b in stations.stations:
+            for c in b.v_rsc:
+                print c.price
+            
         return
 
     def printAbout(self):

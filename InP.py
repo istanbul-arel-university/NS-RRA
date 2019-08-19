@@ -5,6 +5,7 @@ Created on Wed Jul 31 17:12:22 2019
 @author: mohamedhozayen
 """
 import BS
+import VNO
 
 class InfrastructureProvider:
     """
