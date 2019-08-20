@@ -14,7 +14,7 @@ def achievable_data_rate(binary_variable, bandwidth, sinr):
     return rate
 
 def data_rate_temp():
-    return uniform(3.5,6.5) #temporarily 
+    return uniform(4,5) #temporarily 
 
 def pref_func(ach_rate, min_rate):
     diff = ach_rate - min_rate

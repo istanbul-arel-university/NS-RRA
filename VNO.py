@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import UE
 import InP
+import formulas
 
 class VirtualNetworkOperator:
     """
@@ -21,22 +22,32 @@ class VirtualNetworkOperator:
         self.id = id_num
         self.num_users = num_users
         self.users = self.create_users()
-        
+        self.sampl = np.random.uniform(low=4.2, high=6, size=(10000,))
+        self.vrs_data = {"vrs-data":[]}
+
     def create_users(self):
         return [UE.UserEquipment(id_num=i) for i in range(self.num_users)]
-
-
     
+    def add_vr(self, vr):
+        self.vrs_data["vrs-data"].append(vr)
 
     def buildUsersPreferenceProfile(self, stations):
         """
         build VNO Preference Profile
         """
+
         for b in stations.stations:
             for c in b.v_rsc:
-                print c.price
-            
-        return
+                vr = {}
+                vr["base-id"] = b.id
+                vr["vr-id"] = c.id
+                vr["vr-price"] = c.price
+                vr["ach-rate"] = self.sampl[np.random.randint(len(self.sampl-1))] #for each user calculations
+                self.add_vr(vr)
+                print vr
+#        print self.vrs_data
+#        opts[1].vrs_data['vrs-data'][2]['ach-rate']
+        return 
 
     def printAbout(self):
         print

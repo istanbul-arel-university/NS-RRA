@@ -16,8 +16,8 @@ num_vnos = 3
 InP = InP.InfrastructureProvider(num_BS=1, num_channels=5)
 opts = [VNO.VirtualNetworkOperator(id_num=i, num_users=5) for i in range(num_vnos)]
 
-InP.printAbout()
-[opts[i].printAbout() for i in range(len(opts))]
+#InP.printAbout()
+#[opts[i].printAbout() for i in range(len(opts))]
 
 opts[1].buildUsersPreferenceProfile(InP)
 
