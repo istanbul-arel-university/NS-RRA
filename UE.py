@@ -7,6 +7,7 @@ Created on Wed Jul 31 17:11:07 2019
 
 import random
 import math
+import formulas
 
 class UserEquipment:
     """
@@ -28,7 +29,21 @@ class UserEquipment:
         self.loc_x = random.uniform(-500, 500)
         self.loc_y = random.uniform(-500, 500)
         self.distance = math.sqrt((self.loc_x - 0)**2 + (self.loc_y - 0)**2) 
+        self.vrs_data = []
     
+    def pk(self):
+        if self.vrs_data == []:
+            print "vrs_data is not yet assigned"
+        
+        #sort by price
+        self.vrs_data = sorted(self.vrs_data, key = lambda i: i['vr-price'])
+        
+        #fliter -- NOT FULLY WORKING
+        for i in self.vrs_data:
+            if i['ach-rate'] < self.min_data_rate:
+                self.vrs_data.remove(i)
+      
+        return self.vrs_data
     
     
     

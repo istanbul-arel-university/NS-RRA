@@ -42,11 +42,24 @@ class VirtualNetworkOperator:
                 vr["base-id"] = b.id
                 vr["vr-id"] = c.id
                 vr["vr-price"] = c.price
-                vr["ach-rate"] = self.sampl[np.random.randint(len(self.sampl-1))] #for each user calculations
+                vr["ach-rate"] = None #for each user calculations
                 self.add_vr(vr)
-                print vr
+        
+        for i in range(self.num_users):
+            temp = list(self.vrs_data['vrs-data'])
+            for y in temp:
+                y["ach-rate"] = self.sampl[np.random.randint(len(self.sampl-1))] 
+            self.users[i].vrs_data = temp
+            self.users[i].pk()
+#                
 #        print self.vrs_data
 #        opts[1].vrs_data['vrs-data'][2]['ach-rate']
+#        print sorted(d, key = lambda i: i['vr-price'])  
+#                l1 = opts[1].users
+#                a = np.asarray(l1)
+#                d = opts[1].vrs_data['vrs-data']
+#                d1 = sorted(d, key = lambda i: i['vr-price'])
+
         return 
 
     def printAbout(self):
