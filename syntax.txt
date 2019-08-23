@@ -19,6 +19,9 @@ sudo apt-get install python3-numpy
 
 
 anaconda
+conda activate
+conda deactivate
+
 Close and open your terminal window for the installation to take effect, 
 or you can enter the command source ~/.bashrc.
 
