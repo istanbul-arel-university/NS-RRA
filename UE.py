@@ -31,18 +31,21 @@ class UserEquipment:
         self.distance = math.sqrt((self.loc_x - 0)**2 + (self.loc_y - 0)**2) 
         self.vrs_data = []
     
+    def sort_price(self):
+         #sort by price
+        self.vrs_data = sorted(self.vrs_data, key = lambda i: i['vr-price'])
+        
     def pk(self):
         if self.vrs_data == []:
             print "vrs_data is not yet assigned"
-        
-        #sort by price
-        self.vrs_data = sorted(self.vrs_data, key = lambda i: i['vr-price'])
+            return
         
         #fliter -- NOT FULLY WORKING
-        for i in self.vrs_data:
-            if i['ach-rate'] < self.min_data_rate:
-                self.vrs_data.remove(i)
-      
+#        for i in self.vrs_data:
+#            if i['ach-rate'] < self.min_data_rate:
+#                self.vrs_data.remove(i)
+#                print(i)
+        self.sort_price()
         return self.vrs_data
     
     

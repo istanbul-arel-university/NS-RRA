@@ -19,8 +19,13 @@ opts = [VNO.VirtualNetworkOperator(id_num=i, num_users=5) for i in range(num_vno
 #InP.printAbout()
 #[opts[i].printAbout() for i in range(len(opts))]
 
-opts[1].buildUsersPreferenceProfile(InP)
+[i.buildUsersPreferenceProfile(InP) for i in opts]
 
-print opts[1].vrs_data['vrs-data'][2]['ach-rate']
+for i in range(num_vnos):
+    for y in opts[i].users:
+        for k in y.vrs_data:
+            if k['ach-rate'] < 5:
+                print k
+#print opts[1].vrs_data['vrs-data'][2]['ach-rate']
 #for i in range(50):
 #    print(np.random.rayleigh())
